@@ -1,5 +1,5 @@
-const int numAttributes = 3;
-const int numExamples = 4;
+const int numAttributes = 3; //Variable is used to represent number of attributes in hypothesis.
+const int numExamples = 4;  //Variable is used to represent number of datasets avaible for dataset.
 const char* trainingData[numExamples][numAttributes] = {
     {"eat", "play", "fetch"},
     {"eat", "play", "fetch"},
@@ -7,14 +7,14 @@ const char* trainingData[numExamples][numAttributes] = {
     {"eat", "play", "nfetch"}
 };
 const bool isPositive[numExamples] = {true, true, false, true};
-char hypothesis[numAttributes][10];
-char inputHypothesis[numAttributes][10] = { "neat", "play", "fetch" }; // Example input hypothesis
+char hypothesis[numAttributes][10]; //This variable is used for storing final hypothesis.
+char inputHypothesis[numAttributes][10] = { "neat", "play", "fetch" }; // Example input hypothesis used to decide whether PILLI is happy or sad.
 
 void initializeHypothesis() {
     for (int i = 0; i < numAttributes; i++) {
         strcpy(hypothesis[i], "0");
     }
-}
+} //This function is used for initalize hypothesis.
 
 void findS() {
     initializeHypothesis();
@@ -29,7 +29,7 @@ void findS() {
             }
         }
     }
-}
+} // This function is implementation of find-s alogrithm and used for traning machine then stores final hypothesis in hypothesis variable.
 
 bool compareHypotheses(const char inputHypothesis[][10], const char hypothesis[][10], int numAttributes) {
     for (int i = 0; i < numAttributes; i++) {
@@ -38,7 +38,7 @@ bool compareHypotheses(const char inputHypothesis[][10], const char hypothesis[]
         }
     }
     return true;
-}
+} // This function return true or false based upon input hyopthesis variable. 
 
 
 void setup() {
@@ -49,14 +49,14 @@ void setup() {
 
     findS();
     Serial.println("\nThe final hypothesis is:");
-    for (int i = 0; i < numAttributes; i++) {
+    for (int i = 0; i < numAttributes; i++) {   // This loop prints final hypothesis.
         Serial.print(hypothesis[i]);
         Serial.print(" ");
     }
     Serial.println();
 
     bool result = compareHypotheses(inputHypothesis, hypothesis, numAttributes);
-    Serial.println(result ? "Input hypothesis is true." : "Input hypothesis is false.");
+    Serial.println(result ? "Input hypothesis is true." : "Input hypothesis is false."); // This prints whether final hypothesis is true or false.
 }
 
 void loop() {
