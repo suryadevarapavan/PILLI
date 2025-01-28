@@ -3,9 +3,7 @@ void blink1(){
   digitalWrite(12, HIGH);
   delay(100);
   digitalWrite(12, LOW);
-  delay(100);
-  //Serial.print("\nIt's Alive!!");
-  
+  delay(100);  
 }
 
 void blink(){
@@ -14,8 +12,6 @@ void blink(){
   delay(100);
   digitalWrite(13, LOW);
   delay(100);
-  //Serial.print("\nIt's Alive!!");
-  
 }
 const int numAttributes = 3;
 const int numExamples = 4;
