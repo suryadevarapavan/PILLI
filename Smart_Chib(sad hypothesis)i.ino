@@ -4,18 +4,14 @@ void blink1(){
   delay(100);
   digitalWrite(12, LOW);
   delay(100);
-  //Serial.print("\nIt's Alive!!");
-  
-}
+ }
 
 void blink(){
   pinMode(13,OUTPUT);
   digitalWrite(13, HIGH);
   delay(100);
   digitalWrite(13, LOW);
-  delay(100);
-  //Serial.print("\nIt's Alive!!");
-  
+  delay(100); 
 }
 const int numAttributes = 3;
 const int numExamples = 4;
