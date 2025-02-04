@@ -1,8 +1,8 @@
 void blink1(){
-  pinMode(12,OUTPUT);
-  digitalWrite(12, HIGH);
+  pinMode(10,OUTPUT);
+  digitalWrite(10, HIGH);
   delay(100);
-  digitalWrite(12, LOW);
+  digitalWrite(10, LOW);
   delay(100);
  }
 
@@ -58,7 +58,7 @@ bool compareHypotheses(const char inputHypothesis[][10], const char hypothesis[]
 
 const int TRIG_PIN = 6; 
 const int ECHO_PIN = 7; 
-const int LED_PIN_12 = 12; 
+const int LED_PIN_12 = 10; 
 const int LED_PIN_13 = 13; 
 const int DISTANCE_THRESHOLD = 20; 
 
