@@ -1,4 +1,5 @@
 #include<LiquidCrystal.h>
+int contrast =75;
 void blink1(){
   pinMode(10,OUTPUT);
   digitalWrite(10, HIGH);
