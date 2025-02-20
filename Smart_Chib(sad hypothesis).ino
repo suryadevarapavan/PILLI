@@ -1,4 +1,3 @@
-#include<LiquidCrystal.h>
 void blink1(){
   pinMode(10,OUTPUT);
   digitalWrite(10, HIGH);
