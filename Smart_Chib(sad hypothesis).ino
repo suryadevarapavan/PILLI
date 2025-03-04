@@ -1,6 +1,6 @@
 void blink1(){
   pinMode(10,OUTPUT);
-  digitalWrite(10, HIGH); @
+  digitalWrite(10, HIGH); 
   delay(100);
   digitalWrite(10, LOW);
   delay(100);
