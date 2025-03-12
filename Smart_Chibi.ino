@@ -31,7 +31,7 @@ const char* trainingData[numExamples][numAttributes] = {
 };
 const bool isPositive[numExamples] = {true, true, false, true};
 char hypothesis[numAttributes][10];
-char inputHypothesis[numAttributes][10] = { "neat", "play", "fetch" }; // Example input hypothesis
+char inputHypothesis[numAttributes][10] = { "eat", "play", "fetch" }; // Example input hypothesis
 
 void initializeHypothesis() {
     for (int i = 0; i < numAttributes; i++) {
